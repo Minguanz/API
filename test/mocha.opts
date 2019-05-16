@@ -1,0 +1,8 @@
+test/CameraService/*.js
+test/networkService/*.js
+test/electricalService/*.js
+test/laserboxDataServer/*.js
+
+--recursive
+--reporter mochawesome
+-t 50000

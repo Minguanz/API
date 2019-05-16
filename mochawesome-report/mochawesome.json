@@ -1,0 +1,140 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 0,
+    "pending": 0,
+    "failures": 3,
+    "start": "2019-04-26T07:58:52.027Z",
+    "end": "2019-04-26T08:00:32.306Z",
+    "duration": 100279,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "danger",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "e4bd9e4d-76af-4ee0-ad4d-b62462103a35",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "0aae88d1-aa53-44a7-b1d8-d09b8cccee07",
+        "title": "版本与升级服务",
+        "fullFile": "D:\\apitest\\LaserboxApiTest-master\\test\\laserboxDataServer\\laserboxDataServer.js",
+        "file": "\\test\\laserboxDataServer\\laserboxDataServer.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [],
+        "suites": [
+          {
+            "uuid": "ff0774d2-942b-43a8-a2e2-bff5908f53ac",
+            "title": "获取校正文件MD5",
+            "fullFile": "D:\\apitest\\LaserboxApiTest-master\\test\\laserboxDataServer\\laserboxDataServer.js",
+            "file": "\\test\\laserboxDataServer\\laserboxDataServer.js",
+            "beforeHooks": [],
+            "afterHooks": [],
+            "tests": [
+              {
+                "title": "/system@name{action}@value{camera}",
+                "fullTitle": "版本与升级服务 获取校正文件MD5 /system@name{action}@value{camera}",
+                "timedOut": true,
+                "duration": 50002,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "request(netServer)\n.get('/system?action=camera')\n.expect(200)\n.end(function(err,res){\n    if (err) return err\n    chaiEcept(res.text).is.exist\n})",
+                "err": {
+                  "message": "Error: Timeout of 50000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (D:\\apitest\\LaserboxApiTest-master\\test\\laserboxDataServer\\laserboxDataServer.js)",
+                  "estack": "Error: Timeout of 50000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (D:\\apitest\\LaserboxApiTest-master\\test\\laserboxDataServer\\laserboxDataServer.js)"
+                },
+                "isRoot": false,
+                "uuid": "b407aab9-8ab5-4eec-843c-1574443db5e1",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "/system@name{action}@value{}",
+                "fullTitle": "版本与升级服务 获取校正文件MD5 /system@name{action}@value{}",
+                "timedOut": true,
+                "duration": 49996,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "request(netServer)\n.get('/system?action=')\n.expect(200)\n.end(function(err,res){\n    if (err) return err\n    chaiEcept(res.text).match(/'invalid request'/)\n})",
+                "err": {
+                  "message": "Error: Timeout of 50000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (D:\\apitest\\LaserboxApiTest-master\\test\\laserboxDataServer\\laserboxDataServer.js)",
+                  "estack": "Error: Timeout of 50000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (D:\\apitest\\LaserboxApiTest-master\\test\\laserboxDataServer\\laserboxDataServer.js)"
+                },
+                "isRoot": false,
+                "uuid": "1998c4e6-1bbf-4360-82eb-9f0d27467eb5",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "/system@name{action}@value{AABBCC}",
+                "fullTitle": "版本与升级服务 获取校正文件MD5 /system@name{action}@value{AABBCC}",
+                "timedOut": false,
+                "duration": 0,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "request(netServer)\n.get('/system?action=AABBCC')\n.expect(200)\n.end(function(err,res){\n    if (err) return err\n    chaiEcept(res.text).to.exist;\n    chaiEcept(res.text).match(/'invalid request'/)\n    done()\n})",
+                "err": {
+                  "message": "AssertionError: expected '{\"result\":\"failed\"}' to match /'invalid request'/",
+                  "estack": "AssertionError: expected '{\"result\":\"failed\"}' to match /'invalid request'/\n    at Test.<anonymous> (test\\laserboxDataServer\\laserboxDataServer.js:87:37)\n    at Test.assert (node_modules\\supertest\\lib\\test.js:181:6)\n    at localAssert (node_modules\\supertest\\lib\\test.js:131:12)\n    at D:\\apitest\\LaserboxApiTest-master\\node_modules\\supertest\\lib\\test.js:128:5\n    at Test.Request.callback (node_modules\\superagent\\lib\\node\\index.js:716:12)\n    at IncomingMessage.parser (node_modules\\superagent\\lib\\node\\index.js:916:18)\n    at endReadableNT (_stream_readable.js:1094:12)\n    at process._tickCallback (internal/process/next_tick.js:63:19)"
+                },
+                "isRoot": false,
+                "uuid": "d3a757ea-1a4b-425f-b9ec-41fd53bcec59",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [],
+            "passes": [],
+            "failures": [
+              "b407aab9-8ab5-4eec-843c-1574443db5e1",
+              "1998c4e6-1bbf-4360-82eb-9f0d27467eb5",
+              "d3a757ea-1a4b-425f-b9ec-41fd53bcec59"
+            ],
+            "pending": [],
+            "skipped": [],
+            "duration": null,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 50000
+          }
+        ],
+        "passes": [],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 0,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 50000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 50000
+  },
+  "copyrightYear": 2019
+}

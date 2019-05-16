@@ -1,0 +1,35 @@
+GET HTTP://WWW.BAIDU.COM HTTP/1.1
+Content-Type: application/xml
+###
+GET HTTP://WWW.BAIDU.COM HTTP/1.1
+
+###
+GET  http://10.0.0.21:8329/snap?stream=0
+
+###
+GET http://10.0.0.9:8329/camera?exp=100 HTTP/1.1
+###
+
+GET http://10.0.0.9:8329/camera?focus=50.02,50.02,200,200
+
+
+###
+GET http://10.0.0.9:8329/live
+
+
+###
+GET http://10.0.0.9:8329/camera?ircut=142322445 HTTP/1.1
+
+
+###
+GET  http://10.0.0.9:8080/peripherystatus?action=laserworktime 
+
+###
+GET http://10.0.0.21:8080/net?action=aplist  HTTP/1.1
+
+###
+GET http://10.0.0.21:8080/net?action=getssid
+
+
+###
+GET  http://10.0.0.9:8080/net?action=ifconfig  HTTP/1.1
